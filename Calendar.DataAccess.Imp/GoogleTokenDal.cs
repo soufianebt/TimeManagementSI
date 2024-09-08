@@ -44,5 +44,10 @@ namespace Calendar.DataAccess.Imp
                 await _context.SaveChangesAsync();
             }
         }
+
+        public Task<GoogleTokenResponse> GetFirstToken()
+        {
+            return _context.GoogleTokens.FirstOrDefaultAsync();
+        }
     }
 }

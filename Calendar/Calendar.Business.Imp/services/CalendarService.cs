@@ -54,13 +54,14 @@ namespace Calendar.Service.Imp.services
         public Task<string> GetRedirectionUrl()
         {
             return Task.FromResult($"https://accounts.google.com/o/oauth2/v2/auth?" +
-                                    $"scope=https://www.googleapis.com/auth/calendar+https://www.googleapis.com/auth/calendar.events&" +
-                                    $"access_type=offline&" +
-                                    $"include_granted_scopes=true&" +
-                                    $"response_type=code&" +
-                                    $"state=there&" +
-                                    $"redirect_uri={_appSettings.GoogleApiSettings.RedirectUri}&" +
-                                    $"client_id={_appSettings.GoogleApiSettings.ClientId}");
+                        $"scope=https://www.googleapis.com/auth/calendar+https://www.googleapis.com/auth/calendar.events+https://www.googleapis.com/auth/tasks&" +
+                        $"access_type=offline&" +
+                        $"include_granted_scopes=true&" +
+                        $"response_type=code&" +
+                        $"state=there&" +
+                        $"redirect_uri={_appSettings.GoogleApiSettings.RedirectUri}&" +
+                        $"client_id={_appSettings.GoogleApiSettings.ClientId}");
+
         }
     }
 }

@@ -22,9 +22,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendar.DataAccess.Facade"
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CalendarMicroservice", "CalendarMicroservice", "{21072809-5D18-4CC3-982B-EE7C499CFB48}"
-	ProjectSection(SolutionItems) = preProject
-		docker-compose.yml = docker-compose.yml
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendar.DataAccess.Imp", "Calendar.DataAccess.Imp\Calendar.DataAccess.Imp.csproj", "{E1B60461-1629-4226-931A-6BC7E5EFB9D8}"
 	ProjectSection(ProjectDependencies) = postProject

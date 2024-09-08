@@ -12,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 var appSettings = builder.Configuration.Get<AppSettings>();
 var connectionString = builder.Configuration.GetConnectionString("GoogleTokenDatabase");
 builder.Services.RegisterGoogleToken(connectionString);
+builder.Services.RegisterDal();
 builder.Services.AddDistributedMemoryCache(); // You can also use other providers like Redis
 builder.Services.AddSession(options =>
 {

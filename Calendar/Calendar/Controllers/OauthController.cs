@@ -1,8 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using Newtonsoft.Json;
 using Calendar.Service.Facade.services;
 
 namespace Calendar.Controllers
@@ -40,8 +36,6 @@ namespace Calendar.Controllers
             {
                 return StatusCode(500, "Failed to exchange code for token");
             }
-            HttpContext.Session.SetString("OAuthAccessToken", tokenResponse.AccessToken ?? string.Empty);
-            HttpContext.Session.SetString("OAuthRefreshToken", tokenResponse.RefreshToken ?? string.Empty);
             return Ok(tokenResponse);
         }
 
